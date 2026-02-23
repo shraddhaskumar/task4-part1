@@ -1,0 +1,5 @@
+name: CI security + Kind 
+on: 
+  push:
+    branches: [main]
+  

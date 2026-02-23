@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: task4-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: task4-demo
+  template:
+    metadata:
+      labels:
+        app: task4-demo
+    spec:
+      containers:
+      - name: task4-demo
+        image: shraddhaskumar/task4-part1:latest
+        ports:
+        - containerPort: 5000

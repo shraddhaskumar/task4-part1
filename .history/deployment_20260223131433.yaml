@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: task4-demo
+spec:
+  selector:
+    matchLabels:
+      app: task4-demo
+  template:
+    metadata:
+      labels:
+        app: task4-demo
+    spec:
+      containers:
+      - name: task4-demo
+        image: <Image>
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: <Port>

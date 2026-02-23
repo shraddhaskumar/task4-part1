@@ -1,0 +1,11 @@
+name: CI security + Kind 
+on: 
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build-scan-push:
+    runs-on: ubunutu-latest
+  steps:
+  - name: Checkout 
