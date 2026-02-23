@@ -9,8 +9,7 @@ on:
 jobs:
   build-scan-push:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write 
+    
 
     steps:
       - name: Checkout repo
@@ -62,6 +61,7 @@ jobs:
           trivy image \
             --format json \
             --output trivy-report/report.json \
+            --severity CRITICAL,HIGH \
             --exit-code 0 \
             ${{ secrets.DOCKER_USERNAME }}/task4-part1:latest
 
@@ -86,4 +86,4 @@ jobs:
           git config user.email "github-actions@github.com"
           git add trivy-report/report.html trivy-report/report.json
           git commit -m "Add Trivy scan reports [skip ci]" || echo "Nothing to commit"
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:master
+          git push https://${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}.git HEAD:master
