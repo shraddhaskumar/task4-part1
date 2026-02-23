@@ -85,4 +85,4 @@ jobs:
           git config user.email "github-actions@github.com"
           git add trivy-report/report.html trivy-report/report.json
           git commit -m "Add Trivy scan reports [skip ci]" || echo "Nothing to commit"
-          git push origin HEAD:master
+          git push https://${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}.git HEAD:master
