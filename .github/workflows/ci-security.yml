@@ -32,18 +32,24 @@ jobs:
       - name: Create Trivy report directory
         run: mkdir -p trivy-report
 
-      # Use the official Trivy GitHub Action - HTML report
+      # Download the HTML template from the SAME version trivy-action installs (v0.69.2)
+      - name: Download Trivy HTML template
+        run: |
+          curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/v0.69.2/contrib/html.tpl \
+            -o trivy-report/html.tpl
+
+      # HTML report - use the locally downloaded template
       - name: Scan Docker image - HTML report
         uses: aquasecurity/trivy-action@master
         with:
           image-ref: ${{ secrets.DOCKER_USERNAME }}/task4-part1:latest
           format: template
-          template: "@/contrib/html.tpl"
+          template: "@trivy-report/html.tpl"
           output: trivy-report/report.html
           severity: CRITICAL,HIGH
           exit-code: "0"
 
-      # Use the official Trivy GitHub Action - JSON report
+      # JSON report
       - name: Scan Docker image - JSON report
         uses: aquasecurity/trivy-action@master
         with:
