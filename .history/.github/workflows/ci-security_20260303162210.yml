@@ -32,6 +32,7 @@ jobs:
       - name: Create Trivy report directory
         run: mkdir -p trivy-report
 
+      # Download the HTML template from the SAME version trivy-action installs (v0.69.2)
       - name: Download Trivy HTML template
         run: |
           curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/v0.69.2/contrib/html.tpl \
