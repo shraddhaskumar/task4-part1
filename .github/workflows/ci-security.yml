@@ -9,7 +9,6 @@ on:
 jobs:
   build-scan-push:
     runs-on: ubuntu-latest
-    
 
     steps:
       - name: Checkout repo
@@ -33,44 +32,33 @@ jobs:
       - name: Create Trivy report directory
         run: mkdir -p trivy-report
 
-      # Install Trivy manually - gives us access to bundled templates
-      - name: Install Trivy
-        run: |
-          curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin v0.60.0
-
-      # Download the HTML template directly from Trivy's GitHub repo
-      - name: Download Trivy HTML template
-        run: |
-          curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/v0.60.0/contrib/html.tpl \
-            -o trivy-report/html.tpl
-
-      # Scan with HTML output using the downloaded template
+      # Use the official Trivy GitHub Action - HTML report
       - name: Scan Docker image - HTML report
-        run: |
-          trivy image \
-            --format template \
-            --template "@trivy-report/html.tpl" \
-            --output trivy-report/report.html \
-            --severity CRITICAL,HIGH \
-            --exit-code 0 \
-            ${{ secrets.DOCKER_USERNAME }}/task4-part1:latest
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: ${{ secrets.DOCKER_USERNAME }}/task4-part1:latest
+          format: template
+          template: "@/contrib/html.tpl"
+          output: trivy-report/report.html
+          severity: CRITICAL,HIGH
+          exit-code: "0"
 
-      # Scan with JSON output
+      # Use the official Trivy GitHub Action - JSON report
       - name: Scan Docker image - JSON report
-        run: |
-          trivy image \
-            --format json \
-            --output trivy-report/report.json \
-            --severity CRITICAL,HIGH \
-            --exit-code 0 \
-            ${{ secrets.DOCKER_USERNAME }}/task4-part1:latest
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: ${{ secrets.DOCKER_USERNAME }}/task4-part1:latest
+          format: json
+          output: trivy-report/report.json
+          severity: CRITICAL,HIGH
+          exit-code: "0"
 
       # Push Docker image to Docker Hub
       - name: Push Docker image
         run: |
           docker push ${{ secrets.DOCKER_USERNAME }}/task4-part1:latest
 
-      # Upload reports as GitHub Actions artifact (always available in Actions tab)
+      # Upload reports as GitHub Actions artifact
       - name: Upload Trivy reports as artifact
         uses: actions/upload-artifact@v4
         with:
