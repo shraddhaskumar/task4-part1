@@ -3,27 +3,27 @@
   "Trivy": {
     "Version": "0.69.2"
   },
-  "ReportID": "019cb350-1a5f-7e86-a694-b2b13053b17e",
-  "CreatedAt": "2026-03-03T10:48:17.247953331Z",
-  "ArtifactID": "sha256:5ae5edad5c861d49817c84e5f6b898cba4fcdf09d3b20c980a4ec283d49955d6",
+  "ReportID": "019cb356-002f-734b-86eb-8b345c25a094",
+  "CreatedAt": "2026-03-03T10:54:43.759217056Z",
+  "ArtifactID": "sha256:47b867a808336495b82b28c3ff80d8040695e4ac0da1b62b215a6aa1140aaba4",
   "ArtifactName": "shraddhaskumar/task4-part1:latest",
   "ArtifactType": "container_image",
   "Metadata": {
-    "Size": 138031616,
+    "Size": 138343424,
     "OS": {
       "Family": "debian",
       "Name": "13.3"
     },
-    "ImageID": "sha256:6bb7cb0704433babcb7f70278d5765b95c616375d219ad27bbd45ed946ad2701",
+    "ImageID": "sha256:fc7d3c2a3a82106a019b001c72272402318b5af595b78c90354f479b3dec9bd0",
     "DiffIDs": [
       "sha256:a257f20c716c7b5d0474b1b5998f4d1090b573d90b82f764b8f1f1faeb4b524f",
       "sha256:38d85a17b1111a95a0e407827441c6aa9da43d09ff3f1af3febe8017c4c8ffe7",
       "sha256:c2a9fa0f49e59ec1a12af4d7e17adbd07a451685187864014235a8506b2c05de",
       "sha256:a78468ad3279eed5c50477c62f98d1273a0fb7dfb383ad1c4b21c24bb3f908d1",
-      "sha256:65f46249331a6b7151d58734dfe70c581a857dfd7d42ecf6e8732c111253b8f2",
-      "sha256:c12ec15674594c28f4cab8587403b42e4c329133e717aa464ad1225a6955b011",
-      "sha256:a47f71b18c0c3ca9221653af2009bac534babc9cbc9e402750e47a2aebefc45a",
-      "sha256:d620473233c656768ca614e8140ecda6ee8bb510b1a9a93e0e405058fda71f67"
+      "sha256:7e584e4623abc79f4731bb3f2e82eb5ab96bdb941e0e5f143a091038d330449a",
+      "sha256:5d84554685dcc7e02c0256ea54fc4a6c41034b5aae2e2fdf9347dd3553577bb4",
+      "sha256:32f838b400d9207cd0f2b683debf3e781bfc40e506a8cf4a408e32fcdb11b81c",
+      "sha256:eefc2067857bee8d86b6c14ba922c72fd037491efab9c8f1dc45fdae0d68336c"
     ],
     "RepoTags": [
       "shraddhaskumar/task4-part1:latest"
@@ -31,7 +31,7 @@
     "Reference": "shraddhaskumar/task4-part1:latest",
     "ImageConfig": {
       "architecture": "amd64",
-      "created": "2026-03-03T10:47:58.27692559Z",
+      "created": "2026-03-03T10:54:26.018131373Z",
       "history": [
         {
           "created": "2026-02-23T00:00:00Z",
@@ -90,33 +90,33 @@
           "empty_layer": true
         },
         {
-          "created": "2026-03-03T10:47:55Z",
+          "created": "2026-03-03T10:54:23Z",
           "created_by": "WORKDIR /app",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2026-03-03T10:47:55Z",
+          "created": "2026-03-03T10:54:23Z",
           "created_by": "COPY requirements.txt . # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2026-03-03T10:47:58Z",
+          "created": "2026-03-03T10:54:25Z",
           "created_by": "RUN /bin/sh -c pip install -r requirements.txt # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2026-03-03T10:47:58Z",
+          "created": "2026-03-03T10:54:26Z",
           "created_by": "COPY . . # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2026-03-03T10:47:58Z",
+          "created": "2026-03-03T10:54:26Z",
           "created_by": "EXPOSE map[5000/tcp:{}]",
           "comment": "buildkit.dockerfile.v0",
           "empty_layer": true
         },
         {
-          "created": "2026-03-03T10:47:58Z",
+          "created": "2026-03-03T10:54:26Z",
           "created_by": "CMD [\"python\" \"app.py\"]",
           "comment": "buildkit.dockerfile.v0",
           "empty_layer": true
@@ -130,10 +130,10 @@
           "sha256:38d85a17b1111a95a0e407827441c6aa9da43d09ff3f1af3febe8017c4c8ffe7",
           "sha256:c2a9fa0f49e59ec1a12af4d7e17adbd07a451685187864014235a8506b2c05de",
           "sha256:a78468ad3279eed5c50477c62f98d1273a0fb7dfb383ad1c4b21c24bb3f908d1",
-          "sha256:65f46249331a6b7151d58734dfe70c581a857dfd7d42ecf6e8732c111253b8f2",
-          "sha256:c12ec15674594c28f4cab8587403b42e4c329133e717aa464ad1225a6955b011",
-          "sha256:a47f71b18c0c3ca9221653af2009bac534babc9cbc9e402750e47a2aebefc45a",
-          "sha256:d620473233c656768ca614e8140ecda6ee8bb510b1a9a93e0e405058fda71f67"
+          "sha256:7e584e4623abc79f4731bb3f2e82eb5ab96bdb941e0e5f143a091038d330449a",
+          "sha256:5d84554685dcc7e02c0256ea54fc4a6c41034b5aae2e2fdf9347dd3553577bb4",
+          "sha256:32f838b400d9207cd0f2b683debf3e781bfc40e506a8cf4a408e32fcdb11b81c",
+          "sha256:eefc2067857bee8d86b6c14ba922c72fd037491efab9c8f1dc45fdae0d68336c"
         ]
       },
       "config": {
@@ -174,19 +174,19 @@
       },
       {
         "Size": 1536,
-        "DiffID": "sha256:65f46249331a6b7151d58734dfe70c581a857dfd7d42ecf6e8732c111253b8f2"
+        "DiffID": "sha256:7e584e4623abc79f4731bb3f2e82eb5ab96bdb941e0e5f143a091038d330449a"
       },
       {
         "Size": 2560,
-        "DiffID": "sha256:c12ec15674594c28f4cab8587403b42e4c329133e717aa464ad1225a6955b011"
+        "DiffID": "sha256:5d84554685dcc7e02c0256ea54fc4a6c41034b5aae2e2fdf9347dd3553577bb4"
       },
       {
         "Size": 14303744,
-        "DiffID": "sha256:a47f71b18c0c3ca9221653af2009bac534babc9cbc9e402750e47a2aebefc45a"
+        "DiffID": "sha256:32f838b400d9207cd0f2b683debf3e781bfc40e506a8cf4a408e32fcdb11b81c"
       },
       {
-        "Size": 455168,
-        "DiffID": "sha256:d620473233c656768ca614e8140ecda6ee8bb510b1a9a93e0e405058fda71f67"
+        "Size": 766976,
+        "DiffID": "sha256:eefc2067857bee8d86b6c14ba922c72fd037491efab9c8f1dc45fdae0d68336c"
       }
     ]
   },
@@ -7734,7 +7734,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:ce863cc6474e0dfd8148110430f608e108a40565739aa56bafc4c146615e806c",
+          "Fingerprint": "sha256:e87300c5c78db055ad4efbf2910e7fc2c83f4da9d60789f6fa48b47178ab13d2",
           "Title": "glibc: Integer overflow in memalign leads to heap corruption",
           "Description": "Passing too large an alignment to the memalign suite of functions (memalign, posix_memalign, aligned_alloc) in the GNU C Library version 2.30 to 2.42 may result in an integer overflow, which could consequently result in a heap corruption.\n\nNote that the attacker must have control over both, the size as well as the alignment arguments of the memalign function to be able to exploit this.  The size parameter must be close enough to PTRDIFF_MAX so as to overflow size_t along with the large alignment argument.  This limits the malicious inputs for the alignment for memalign to the range [1\u003c\u003c62+ 1, 1\u003c\u003c63] and exactly 1\u003c\u003c63 for posix_memalign and aligned_alloc.\n\nTypically the alignment argument passed to such functions is a known constrained quantity (e.g. page size, block size, struct sizes) and is not attacker controlled, because of which this may not be easily exploitable in practice.  An application bug could potentially result in the input alignment being too large, e.g. due to a different buffer overflow or integer overflow in the application or its dependent libraries, but that is again an uncommon usage pattern given typical sources of alignments.",
           "Severity": "HIGH",
@@ -7802,7 +7802,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Fingerprint": "sha256:f8544577e8656b5f11c4ea799209434bfb7497f65b38a2a86f0ced17a76ca3f2",
+          "Fingerprint": "sha256:afc6c570f813560404703fa90f55de12a1f5dd87a9dd71d1e0da8fea7984a739",
           "Title": "glibc: Integer overflow in memalign leads to heap corruption",
           "Description": "Passing too large an alignment to the memalign suite of functions (memalign, posix_memalign, aligned_alloc) in the GNU C Library version 2.30 to 2.42 may result in an integer overflow, which could consequently result in a heap corruption.\n\nNote that the attacker must have control over both, the size as well as the alignment arguments of the memalign function to be able to exploit this.  The size parameter must be close enough to PTRDIFF_MAX so as to overflow size_t along with the large alignment argument.  This limits the malicious inputs for the alignment for memalign to the range [1\u003c\u003c62+ 1, 1\u003c\u003c63] and exactly 1\u003c\u003c63 for posix_memalign and aligned_alloc.\n\nTypically the alignment argument passed to such functions is a known constrained quantity (e.g. page size, block size, struct sizes) and is not attacker controlled, because of which this may not be easily exploitable in practice.  An application bug could potentially result in the input alignment being too large, e.g. due to a different buffer overflow or integer overflow in the application or its dependent libraries, but that is again an uncommon usage pattern given typical sources of alignments.",
           "Severity": "HIGH",
@@ -7869,7 +7869,7 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "DiffID": "sha256:a47f71b18c0c3ca9221653af2009bac534babc9cbc9e402750e47a2aebefc45a"
+            "DiffID": "sha256:32f838b400d9207cd0f2b683debf3e781bfc40e506a8cf4a408e32fcdb11b81c"
           },
           "FilePath": "usr/local/lib/python3.12/site-packages/Flask-2.3.2.dist-info/METADATA",
           "AnalyzedBy": "python-pkg"
@@ -7885,7 +7885,7 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "DiffID": "sha256:a47f71b18c0c3ca9221653af2009bac534babc9cbc9e402750e47a2aebefc45a"
+            "DiffID": "sha256:32f838b400d9207cd0f2b683debf3e781bfc40e506a8cf4a408e32fcdb11b81c"
           },
           "FilePath": "usr/local/lib/python3.12/site-packages/jinja2-3.1.6.dist-info/METADATA",
           "AnalyzedBy": "python-pkg"
@@ -7901,7 +7901,7 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "DiffID": "sha256:a47f71b18c0c3ca9221653af2009bac534babc9cbc9e402750e47a2aebefc45a"
+            "DiffID": "sha256:32f838b400d9207cd0f2b683debf3e781bfc40e506a8cf4a408e32fcdb11b81c"
           },
           "FilePath": "usr/local/lib/python3.12/site-packages/markupsafe-3.0.3.dist-info/METADATA",
           "AnalyzedBy": "python-pkg"
@@ -7917,7 +7917,7 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "DiffID": "sha256:a47f71b18c0c3ca9221653af2009bac534babc9cbc9e402750e47a2aebefc45a"
+            "DiffID": "sha256:32f838b400d9207cd0f2b683debf3e781bfc40e506a8cf4a408e32fcdb11b81c"
           },
           "FilePath": "usr/local/lib/python3.12/site-packages/werkzeug-3.1.6.dist-info/METADATA",
           "AnalyzedBy": "python-pkg"
@@ -7933,7 +7933,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:a47f71b18c0c3ca9221653af2009bac534babc9cbc9e402750e47a2aebefc45a"
+            "DiffID": "sha256:32f838b400d9207cd0f2b683debf3e781bfc40e506a8cf4a408e32fcdb11b81c"
           },
           "FilePath": "usr/local/lib/python3.12/site-packages/blinker-1.9.0.dist-info/METADATA",
           "AnalyzedBy": "python-pkg"
@@ -7949,7 +7949,7 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "DiffID": "sha256:a47f71b18c0c3ca9221653af2009bac534babc9cbc9e402750e47a2aebefc45a"
+            "DiffID": "sha256:32f838b400d9207cd0f2b683debf3e781bfc40e506a8cf4a408e32fcdb11b81c"
           },
           "FilePath": "usr/local/lib/python3.12/site-packages/click-8.3.1.dist-info/METADATA",
           "AnalyzedBy": "python-pkg"
@@ -7965,7 +7965,7 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "DiffID": "sha256:a47f71b18c0c3ca9221653af2009bac534babc9cbc9e402750e47a2aebefc45a"
+            "DiffID": "sha256:32f838b400d9207cd0f2b683debf3e781bfc40e506a8cf4a408e32fcdb11b81c"
           },
           "FilePath": "usr/local/lib/python3.12/site-packages/itsdangerous-2.2.0.dist-info/METADATA",
           "AnalyzedBy": "python-pkg"
